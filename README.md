@@ -16,7 +16,7 @@ Simples, leve e funcional — perfeita para quem quer um servidor básico já co
 </p>
 
 ```bash
-git clone https://github.com/Nk-Petrov/site-base.git
+git clone https://github.com/Nk-Petrov/site-base
 ```
 
 Depois de clonar, entre na pasta do projeto:
@@ -59,7 +59,7 @@ O servidor Express iniciará automaticamente e seu site estará disponível em:
 Clone o repositório diretamente no servidor ou hosting que estiver usando:
 
 ```bash
-git clone https://github.com/Nk-Petrov/site-base.git
+git clone https://github.com/Nk-Petrov/site-base
 ```
 
 E inicie o servidor:
