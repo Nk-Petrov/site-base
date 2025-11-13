@@ -50,7 +50,7 @@ node index.js
 ```
 
 💡 **Pronto!**  
-O servidor Express iniciará automaticamente e seu site estará disponível em:
+O servidor iniciará automaticamente e apenas no seu dispositivo com a porta:
 
 👉 **http://localhost:3000**
 
