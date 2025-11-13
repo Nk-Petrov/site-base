@@ -1,0 +1,26 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "Base do site desenvolvida por @Nk Petrov.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "@Nk Petrov",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nk-Petrov/site-base.git"
+  },
+  "homepage": "https://github.com/Nk-Petrov/site-base",
+  "bugs": {
+    "url": "https://github.com/Nk-Petrov/site-base/issues"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

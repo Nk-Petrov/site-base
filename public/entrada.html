@@ -1,0 +1,123 @@
+<!-- 
+  Autor: @Nk Petrov
+  Descrição: Página inicial do site.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página de Entrada - Exemplo</title>
+<meta property="og:title" content="Exemplo de Site">
+<meta property="og:description" content="Página de entrada explicativa">
+<meta property="og:image" content="https://www.example.com/sua-imagem.jpg">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+<style>
+/* RESET */
+*{margin:0;padding:0;box-sizing:border-box;}
+body,html{width:100%;height:100%;font-family:'Orbitron',sans-serif;background:black;color:#fff;overflow:hidden;}
+
+/* FUNDO ANIMADO */
+.stars,.particles,.matrix{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;overflow:hidden;}
+.star,.particle{position:absolute;border-radius:50%;background:white;opacity:0.5;animation:twinkle 3s infinite alternate;}
+@keyframes twinkle{0%,100%{opacity:0.2;}50%{opacity:1;}}
+.matrix span{position:absolute;color:#ff0033;font-size:12px;animation:matrixMove linear infinite;opacity:0.3;}
+@keyframes matrixMove{0%{transform:translateY(-100%);}100%{transform:translateY(100vh);}}
+
+/* CONTEÚDO */
+.container{position:relative;z-index:1;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+.profile-bubble{width:200px;height:200px;border-radius:50%;border:6px solid #ff0033;background:rgba(0,0,0,0.8);
+  overflow:hidden;box-shadow:0 0 25px #ff0033aa;display:flex;align-items:center;justify-content:center;margin-bottom:25px;}
+.profile-bubble img{width:100%;height:100%;object-fit:cover;}
+h1{font-size:3em;color:#ff0033;text-shadow:0 0 10px #ff0033,0 0 20px #ff3366;animation:glitch 1s infinite;}
+@keyframes glitch{
+  0%{text-shadow:2px 0 #ff0033,-2px 2px #ff3366;}
+  20%{text-shadow:-2px -2px #ff0033,2px 2px #ff3366;}
+  40%{text-shadow:2px 2px #ff0033,-2px -2px #ff3366;}
+  60%{text-shadow:-2px 2px #ff0033,2px -2px #ff3366;}
+  80%{text-shadow:2px -2px #ff0033,-2px 2px #ff3366;}
+  100%{text-shadow:2px 0 #ff0033,-2px 2px #ff3366;}
+}
+.subtitle{margin-top:10px;font-size:1.2em;color:#aaa;text-shadow:0 0 5px #ff0033;}
+
+/* BOTÃO DE ENTRAR */
+.enter-btn{
+  margin-top:40px;
+  padding:14px 32px;
+  font-size:1.3em;
+  font-weight:bold;
+  color:#fff;
+  background:#ff0033;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  box-shadow:0 0 15px #ff0033,0 0 35px #ff3366, inset 0 0 10px #660000;
+  transition:.3s;
+  position:relative;
+  overflow:hidden;
+}
+.enter-btn::after{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:rgba(255,51,102,0.2);
+  transition:.5s;
+}
+.enter-btn:hover::after{left:0;}
+.enter-btn:hover{
+  background:#ff3366;
+  box-shadow:0 0 20px #ff3366,0 0 50px #ff0033, inset 0 0 15px #ff0000;
+  transform:translateY(-3px) scale(1.05);
+}
+
+/* FOOTER */
+footer{position:absolute;bottom:15px;width:100%;text-align:center;font-size:0.8em;color:#666;}
+</style>
+</head>
+<body>
+
+<!-- FUNDO -->
+<div class="stars" id="stars"></div>
+<div class="particles" id="particles"></div>
+<div class="matrix" id="matrix"></div>
+
+<!-- CONTEÚDO -->
+<div class="container">
+  <div class="profile-bubble">
+      <img src="https://www.example.com/avatar.jpg" alt="Avatar Exemplo">
+  </div>
+  <h1>EXEMPLO DE SITE</h1>
+  <div class="subtitle">Texto explicativo do cabeçalho</div>
+  <button class="enter-btn" onclick="window.location.href='pagina_exemplo.html'">ENTRAR</button>
+</div>
+
+<footer>&copy; 2025 Texto explicativo do rodapé</footer>
+
+<script>
+// ESTRELAS
+const starsContainer=document.getElementById('stars');
+for(let i=0;i<150;i++){const star=document.createElement('div');star.className='star';
+  star.style.top=Math.random()*100+'%';star.style.left=Math.random()*100+'%';
+  star.style.width=star.style.height=Math.random()*2+1+'px';
+  star.style.animationDuration=(Math.random()*3+1)+'s';starsContainer.appendChild(star);}
+// PARTICULAS
+const particlesContainer=document.getElementById('particles');
+for(let i=0;i<60;i++){const p=document.createElement('div');p.className='particle';
+  p.style.top=Math.random()*100+'%';p.style.left=Math.random()*100+'%';
+  p.style.width=p.style.height=Math.random()*4+2+'px';particlesContainer.appendChild(p);}
+// MATRIX
+const matrixContainer=document.getElementById('matrix');const chars='01';
+for(let i=0;i<200;i++){const m=document.createElement('span');m.innerText=chars[Math.floor(Math.random()*chars.length)];
+  m.style.left=Math.random()*100+'%';m.style.top=Math.random()*-100+'vh';
+  m.style.animationDuration=(5+Math.random()*5)+'s';matrixContainer.appendChild(m);}
+</script>
+
+</body>
+</html>
