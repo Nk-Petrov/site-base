@@ -15,6 +15,14 @@ Simples, leve e funcional — perfeita para quem quer um servidor básico já co
   </a>
 </p>
 
+Antes de clonar o projeto, entre no diretório principal do armazenamento interno para evitar erros de permissão no Termux:
+
+```bash
+cd /sdcard
+```
+
+Agora sim, faça o clone do repositório:
+
 ```bash
 git clone https://github.com/Nk-Petrov/site-base
 ```
@@ -62,14 +70,15 @@ Clone o repositório diretamente no servidor ou hosting que estiver usando:
 git clone https://github.com/Nk-Petrov/site-base
 ```
 
-E inicie o servidor:
+Acesse o **START** da Hosting e mude para: 
 
 ```bash
 node index.js
 ```
+E inicie o servidor.
 
 💡 **Pronto!**  
-O site rodará online com o **Express** ativo.
+O site rodará online.
 
 ---
 
