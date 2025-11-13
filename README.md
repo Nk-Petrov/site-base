@@ -1,6 +1,6 @@
 # 🌐 Base de Site em JavaScript + Express — @Nk Petrov
 
-Uma **base pronta de site em JavaScript** com **Express**, feita para quem não quer começar do zero.  
+Uma **base pronta de site API em JavaScript** com **Express**, feita para quem não quer começar do zero.  
 Simples, leve e funcional — perfeita para quem quer um servidor básico já configurado para rodar o site rapidamente.
 
 ---
